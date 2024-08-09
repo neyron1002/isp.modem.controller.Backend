@@ -14,7 +14,7 @@ CREATE TABLE Modem (
 GO
 
 CREATE TABLE ACServer (
-    IdACServer INT PRIMARY KEY,
+    IdACServer INT IDENTITY(1,1) PRIMARY KEY,
     IdCompany UNIQUEIDENTIFIER,
     ServerAccessIp VARCHAR(100),
     Port VARCHAR(100),
@@ -25,13 +25,13 @@ CREATE TABLE ACServer (
 GO
 
 CREATE TABLE TermGroup (
-    IdTermGroup INT PRIMARY KEY,
+    IdTermGroup INT IDENTITY(1,1) PRIMARY KEY,
     NameGroup VARCHAR(100)
 );
 GO
 
 CREATE TABLE Term (
-    IdTerm INT PRIMARY KEY,
+    IdTerm INT IDENTITY(1,1) PRIMARY KEY,
     IdTermGroup INT,
     Term VARCHAR(100),
     Enable BIT,

@@ -17,7 +17,7 @@ class Modem(models.Model):
 
 class ACServer(models.Model):
     IdACServer = models.AutoField(primary_key=True)
-    IdCompany = models.UUIDField(default=uuid.uuid4, unique=True)
+    IdCompany = models.CharField(max_length=100)
     ServerAccessIp = models.CharField(max_length=100)
     Port = models.CharField(max_length=100)
     JsonParameters = models.TextField()

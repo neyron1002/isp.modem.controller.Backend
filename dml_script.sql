@@ -376,3 +376,25 @@ INSERT INTO Modem (Manufacturer, Oui, ProductClass, JsonParameters) VALUES ('TP-
         "ssid5gPath": "InternetGatewayDevice.LANDevice.1.WLANConfiguration.2.SSID"
     }
 }');
+INSERT INTO Modem (Manufacturer, Oui, ProductClass, JsonParameters) VALUES ('GZNO', '006D61', 'SML-2802GWT', '{
+    "manufacturer": "GZNO",
+    "oui": "006D61",
+    "productClass": "SML-2802GWT",
+    "has5g": false,
+    "paths": {
+        "ssidPath": "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.SSID",
+        "passwordPath": "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.KeyPassphrase"
+    }
+}');
+
+--- Acs server
+
+INSERT INTO ACServer (IdCompany, ServerAccessIp, Port, JsonParameters, IsEnabled, DatetimeCreated)
+VALUES (
+    '074df218-3463-446d-b72e-3a7008eac3d6', 
+    '38.52.156.23', 
+    '7557', 
+    '{}', 
+    1, 
+    GETDATE()
+);
